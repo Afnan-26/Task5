@@ -1,10 +1,12 @@
-  import 'dart:io';
+import 'dart:io';
+
 // task 3
 int rectangleAreaNormal(int length, int width) {
   return length * width;
 }
 
 int rectangleAreaArrow(int length, int width) => length * width;
+
 // task 4
 Stream<int> numberStream() async* {
   for (int i = 1; i <= 5; i++) {
@@ -72,15 +74,13 @@ void main() async {
   }
   //task 5
   print("Fetching data...");
-  String data  = await fetchData();
-  print(data );
+  String data = await fetchData();
+  print(data);
 
   //task 6
   String? username;
   print("Enter your username:");
   username = stdin.readLineSync();
   username ??= "Guest";
-  print(username == "Guest"
-      ? "Guest"
-      : "Welcome, $username");
+  print(username == "Guest" ? "Guest" : "Welcome, $username");
 }
